@@ -98,6 +98,7 @@ class ObjectivesPlugin @Inject constructor(
         objectives.add(Objective8(injector))
         objectives.add(Objective9(injector))
         objectives.add(Objective10(injector))
+        sp.getBoolean(R.string.key_virtualpump_uploadstatus, true);
         sp.putBoolean(R.string.key_ObjectivesbgIsAvailableInNS, true)
         sp.putBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, true)
         sp.putInt(R.string.key_ObjectivesmanualEnacts, 200)

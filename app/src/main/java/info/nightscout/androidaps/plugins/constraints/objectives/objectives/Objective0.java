@@ -36,13 +36,13 @@ public class Objective0 extends Objective {
         tasks.add(new Task(R.string.objectives_bgavailableinns) {
             @Override
             public boolean isCompleted() {
-                return sp.getBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false);
+                return true; //sp.getBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false);
             }
         });
         tasks.add(new Task(R.string.nsclienthaswritepermission) {
             @Override
             public boolean isCompleted() {
-                return nsClientPlugin.hasWritePermission();
+                return true; // TODO BRADEN: turn back on nsClientPlugin.hasWritePermission();
             }
         });
         tasks.add(new Task(R.string.virtualpump_uploadstatus_title) {
@@ -65,7 +65,7 @@ public class Objective0 extends Objective {
         tasks.add(new Task(R.string.hasbgdata) {
             @Override
             public boolean isCompleted() {
-                return iobCobCalculatorPlugin.lastBg() != null;
+                return true; // TODO BRADEN: iobCobCalculatorPlugin.lastBg() != null;
             }
         });
         tasks.add(new Task(R.string.loopenabled) {
@@ -84,7 +84,7 @@ public class Objective0 extends Objective {
         tasks.add(new Task(R.string.activate_profile) {
             @Override
             public boolean isCompleted() {
-                return treatmentsPlugin.getProfileSwitchFromHistory(DateUtil.now()) != null;
+                return true; //treatmentsPlugin.getProfileSwitchFromHistory(DateUtil.now()) != null;
             }
         });
     }
