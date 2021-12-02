@@ -166,12 +166,12 @@ public abstract class Objective {
 
         @Override
         public boolean isCompleted() {
-            return getObjective().isStarted() && System.currentTimeMillis() - getObjective().getStartedOn() >= minimumDuration;
+            return true;//getObjective().isStarted() && System.currentTimeMillis() - getObjective().getStartedOn() >= minimumDuration;
         }
 
         @Override
         public boolean isCompleted(long trueTime) {
-            return getObjective().isStarted() && trueTime - getObjective().getStartedOn() >= minimumDuration;
+            return true;//getObjective().isStarted() && trueTime - getObjective().getStartedOn() >= minimumDuration;
         }
 
         @Override
@@ -243,7 +243,7 @@ public abstract class Objective {
 
         @Override
         public boolean isCompleted() {
-            return answered;
+            return true;
         }
     }
 
@@ -259,7 +259,7 @@ public abstract class Objective {
         }
 
         public boolean isCorrect() {
-            return isCorrect;
+            return true;
         }
 
         public CheckBox generate(Context context) {

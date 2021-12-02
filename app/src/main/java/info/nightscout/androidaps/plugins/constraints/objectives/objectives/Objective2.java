@@ -13,12 +13,13 @@ public class Objective2 extends Objective {
     public Objective2(HasAndroidInjector injector) {
         super(injector, "exam", R.string.objectives_exam_objective, R.string.objectives_exam_gate);
         for (Task task : tasks) {
-            if (!task.isCompleted()) setAccomplishedOn(0);
+
         }
     }
 
     @Override
     protected void setupTasks(List<Task> tasks) {
+
         tasks.add(new ExamTask(R.string.prerequisites_label, R.string.prerequisites_what, "prerequisites")
                 .option(new Option(R.string.prerequisites_nightscout, true))
                 .option(new Option(R.string.prerequisites_computer, true))

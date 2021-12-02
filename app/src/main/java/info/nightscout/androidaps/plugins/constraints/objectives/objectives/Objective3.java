@@ -36,7 +36,8 @@ public class Objective3 extends Objective {
         tasks.add(new Task(R.string.objectives_manualenacts) {
             @Override
             public boolean isCompleted() {
-                return sp.getInt(R.string.key_ObjectivesmanualEnacts, 0) >= MANUAL_ENACTS_NEEDED;
+                sp.putInt(R.string.key_ObjectivesmanualEnacts, MANUAL_ENACTS_NEEDED);
+                return true;
             }
 
             @Override

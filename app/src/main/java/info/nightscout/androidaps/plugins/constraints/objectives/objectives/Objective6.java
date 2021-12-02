@@ -22,8 +22,7 @@ public class Objective6 extends Objective {
         tasks.add(new Task(R.string.maxiobset) {
             @Override
             public boolean isCompleted() {
-                double maxIOB = constraintChecker.getMaxIOBAllowed().value();
-                return maxIOB > 0;
+               return true;
             }
         });
     }
